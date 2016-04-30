@@ -6,6 +6,8 @@
             <div class="panel panel-default">
                 <div class="panel-heading">New Project</div>
                 <div class="panel-body">
+                    @include('common.errors')
+
                     <form action="{{ url('/projects') }}" method="POST">
                         {!! csrf_field() !!}
 
