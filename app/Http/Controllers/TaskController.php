@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Repositories\TaskRepository;
+
 use App\Task;
+use App\Project;
 
 class TaskController extends Controller
 {
@@ -20,10 +22,12 @@ class TaskController extends Controller
     }
 
 
-    public function index(Request $request)
+    public function index(Request $request, Project $project)
     {
+
         return view('tasks.index', [
-            'tasks' => $this->tasks->forUser($request->user()),
+            'project' => $project,
+            'tasks' => $project->tasks(),
         ]);
     }
 
