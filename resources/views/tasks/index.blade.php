@@ -58,7 +58,7 @@
                                             {!! csrf_field() !!}
                                             {!! method_field('DELETE') !!}
 
-                                            <button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger">
+                                            <button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger btn-xs">
                                                 <i class="fa fa-btn fa-trash"></i>Delete
                                             </button>
                                         </form>
