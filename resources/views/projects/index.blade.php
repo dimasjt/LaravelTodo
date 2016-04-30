@@ -6,25 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">New Project</div>
                 <div class="panel-body">
-                    @include('common.errors')
-
-                    <form action="{{ url('/projects') }}" method="POST">
-                        {!! csrf_field() !!}
-
-                        <div class="form-group">
-                            <label for="project_name">Project Name</label>
-                            <input type="text" name="name" id="project_name" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="project_description">Description</label>
-                            <textarea name="description" id="project_description" class="form-control"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-success">
-                        </div>
-                    </form>
+                    @include('projects.form')
                 </div>
             </div>
         </div>
